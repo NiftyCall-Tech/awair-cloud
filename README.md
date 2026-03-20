@@ -4,7 +4,6 @@ Open-source [Next.js](https://nextjs.org/) 16 dashboard for **Awair** indoor air
 
 Two screens: **Dashboard** (live metrics, sparklines, score history, 7‑day score outlook, VOC panel) and **Settings** (device metadata save, quota, connectivity when the API exposes it).
 
-![Dashboard reference](screen.png)
 
 ## Features
 
@@ -46,34 +45,34 @@ You need a **valid token**, **demo off**, and Awair returning **`data`** on `5-m
 
 ## Scripts
 
-| Command | Purpose |
-|---------|---------|
-| `npm run dev` | Development server |
-| `npm run build` | Production build |
-| `npm run start` | Run production server |
-| `npm run lint` | ESLint |
-| `npm run test` | Vitest (once) |
-| `npm run test:watch` | Vitest watch mode |
+| Command              | Purpose               |
+| -------------------- | --------------------- |
+| `npm run dev`        | Development server    |
+| `npm run build`      | Production build      |
+| `npm run start`      | Run production server |
+| `npm run lint`       | ESLint                |
+| `npm run test`       | Vitest (once)         |
+| `npm run test:watch` | Vitest watch mode     |
 
 ## Documentation
 
-| Doc | Contents |
-|-----|----------|
-| [`docs/ENVIRONMENT.md`](docs/ENVIRONMENT.md) | All env vars (token, history limits, caches, demo). |
-| [`docs/API.md`](docs/API.md) | Internal BFF routes (`/api/awair/*`), device PATCH/PUT, empty charts troubleshooting. |
-| [`docs/API_COVERAGE.md`](docs/API_COVERAGE.md) | What Awair endpoints this app calls vs. not implemented. |
-| [`docs/METRICS.md`](docs/METRICS.md) | Score, sensors, indices, EPA AQI, history, weekly forecast. |
-| [`docs/CUSTOMIZATION.md`](docs/CUSTOMIZATION.md) | Branding, thresholds, room types, layout metadata. |
+| Doc                                              | Contents                                                                              |
+| ------------------------------------------------ | ------------------------------------------------------------------------------------- |
+| [`docs/ENVIRONMENT.md`](docs/ENVIRONMENT.md)     | All env vars (token, history limits, caches, demo).                                   |
+| [`docs/API.md`](docs/API.md)                     | Internal BFF routes (`/api/awair/*`), device PATCH/PUT, empty charts troubleshooting. |
+| [`docs/API_COVERAGE.md`](docs/API_COVERAGE.md)   | What Awair endpoints this app calls vs. not implemented.                              |
+| [`docs/METRICS.md`](docs/METRICS.md)             | Score, sensors, indices, EPA AQI, history, weekly forecast.                           |
+| [`docs/CUSTOMIZATION.md`](docs/CUSTOMIZATION.md) | Branding, thresholds, room types, layout metadata.                                    |
 
 ## Project layout
 
-| Path | Role |
-|------|------|
-| `src/app/(app)/` | Dashboard & Settings routes |
-| `src/app/api/awair/` | BFF route handlers |
-| `src/lib/awair/` | Awair REST client (`client.ts`), dashboard/settings payloads, AQI |
-| `src/config/` | Site copy, thresholds, room types |
-| `docs/` | Env, metrics, internal API, coverage |
+| Path                 | Role                                                              |
+| -------------------- | ----------------------------------------------------------------- |
+| `src/app/(app)/`     | Dashboard & Settings routes                                       |
+| `src/app/api/awair/` | BFF route handlers                                                |
+| `src/lib/awair/`     | Awair REST client (`client.ts`), dashboard/settings payloads, AQI |
+| `src/config/`        | Site copy, thresholds, room types                                 |
+| `docs/`              | Env, metrics, internal API, coverage                              |
 
 ## Customization
 
