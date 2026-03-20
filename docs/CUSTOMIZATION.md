@@ -17,3 +17,7 @@
 ## Fresh data on the dashboard
 
 - Data is fetched on each **navigation** or full **page load** (no automatic timer). Reload the page to pull the latest Awair samples.
+
+## Access gate (optional)
+
+- Set **`APP_ACCESS_PASSWORD`** in the environment ([`ENVIRONMENT.md`](./ENVIRONMENT.md)). Visitors hit `/login` first; after a correct password, an **httpOnly** cookie unlocks the app and `/api/awair/*`. Use the header **Sign out** control to clear the cookie. This is a lightweight barrier, not full identity auth.

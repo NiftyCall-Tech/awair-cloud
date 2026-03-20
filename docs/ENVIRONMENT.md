@@ -4,6 +4,7 @@ All Awair secrets are **server-only**. The browser never sees your token.
 
 | Variable | Required | Default | Purpose |
 |----------|----------|---------|---------|
+| `APP_ACCESS_PASSWORD` | No | — | If set, visitors must enter this password on `/login` before any page or `/api/awair/*` runs (reduces accidental Awair API usage from public URLs). Uses an **httpOnly** cookie — not a substitute for network-level auth. Leave unset for open access. |
 | `AWAIR_ACCESS_TOKEN` | Yes (unless demo) | — | Bearer token from the [Awair Developer Console](https://developer.getawair.com/). |
 | `AWAIR_BEARER_TOKEN` | No | — | **Alias** for `AWAIR_ACCESS_TOKEN` for older scripts or hosting presets. |
 | `AWAIR_API_BASE_URL` | No | `https://developer-apis.awair.is/v1` | REST base URL (include `/v1`). |

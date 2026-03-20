@@ -7,6 +7,7 @@ Two screens: **Dashboard** (live metrics, sparklines, score history, 7‑day sco
 
 ## Features
 
+- **Optional access gate** — Set `APP_ACCESS_PASSWORD` so visitors must sign in on `/login` before any UI or `/api/awair/*` runs (httpOnly cookie; see [`docs/ENVIRONMENT.md`](docs/ENVIRONMENT.md)).
 - **Server-side Awair client** — Bearer token stays in environment variables; never sent to the browser.
 - **Air-data** — `latest`, `5-min-avg`, `15-min-avg`, optional `raw` (see env below). History limits default to Awair’s documented caps for charts.
 - **Metrics** — Hero uses API **`score`**; cards render every `sensors[]` `comp`; optional **`indices`**; US EPA AQI text is **derived from PM2.5** only ([`docs/METRICS.md`](docs/METRICS.md)).

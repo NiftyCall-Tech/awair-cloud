@@ -4,11 +4,19 @@ These routes are thin **server-side BFF** wrappers around the [Awair Developer A
 
 ## Conventions
 
-- **Auth:** None on these routes; protection is network placement (private LAN, VPN, or auth proxy in front of Next.js).
+- **Auth:** Optional **`APP_ACCESS_PASSWORD`** ([`ENVIRONMENT.md`](./ENVIRONMENT.md)) gates the whole app (including these routes) via middleware + `/login` + `POST /api/auth/access`. This is a simple shared password, not a user system — use VPN / reverse-proxy auth for real security.
 - **Errors:** JSON `{ "error": string }` with 4xx/5xx. Device updates may also include **`detail`** (raw Awair response body) for debugging.
 - **Content-Type:** `application/json` for bodies and responses.
 
 ## Routes
+
+### `POST /api/auth/access`
+
+Body: `{ "password": string }`. If `APP_ACCESS_PASSWORD` is set and matches, sets an **httpOnly** session cookie. If the gate is disabled, returns `{ ok: true }` without setting a cookie.
+
+### `POST /api/auth/logout`
+
+Clears the access cookie (sign out of the gate).
 
 ### `GET /api/awair/dashboard`
 
