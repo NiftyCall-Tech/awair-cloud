@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+/* Screenshot-aligned palette: near-black canvas, charcoal cards, emerald / amber / rose accents */
+@theme inline {
+  --font-sans: var(--font-inter);
+  --color-surface: #000000;
+  --color-surface-container-low: #141416;
+  --color-surface-container: #1e1e1e;
+  --color-surface-container-high: #2a2a2c;
+  --color-surface-variant: #2d2f33;
+  --color-on-surface: #ffffff;
+  --color-on-surface-muted: #94a3b8;
+  --color-primary: #22c55e;
+  --color-primary-dim: #16a34a;
+  --color-primary-container: #4ade80;
+  --color-secondary: #f59e0b;
+  --color-tertiary: #f43f5e;
+  --color-on-primary: #000000;
+  --color-outline-variant: #3f3f46;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: var(--color-surface);
+  color: var(--color-on-surface);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-primary) 35%, transparent);
+}
