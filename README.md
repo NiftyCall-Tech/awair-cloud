@@ -4,6 +4,9 @@ Open-source [Next.js](https://nextjs.org/) 16 dashboard for **Awair** indoor air
 
 Two screens: **Dashboard** (live metrics, sparklines, score history, 7‑day score outlook, VOC panel) and **Settings** (device metadata save, quota, connectivity when the API exposes it).
 
+## Dashboard
+
+![Awair Cloud dashboard](public/awair.png)
 
 ## Features
 
